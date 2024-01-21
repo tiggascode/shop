@@ -53,11 +53,54 @@
                 </div>
               </div>
 
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">Upload</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">Upload</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">Upload</span>
+                  </div>
+                </div>
+              </div>
+
+
               <div class="form-group ">
                 <select name="category_id" class="form-control select2" style="width: 100%;">
                   <option value="1" selected="selected" diabled>Select Category</option>
                   @foreach ($categories as $category)
                   <option value="{{ $category->id }}">{{ $category->title }}</option>
+                  @endforeach
+                </select>
+              </div>
+              <div class="form-group ">
+                <select name="group_id" class="form-control select2" style="width: 100%;">
+                  <option value="1" selected="selected" diabled>Select Group</option>
+                  @foreach ($groups as $group)
+                  <option value="{{ $group->id }}">{{ $group->title }}</option>
                   @endforeach
                 </select>
               </div>
