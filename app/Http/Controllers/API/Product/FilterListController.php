@@ -15,14 +15,15 @@ use App\Models\Color;
 class FilterListController extends Controller
 {
     public function __invoke(Product $product){
+
         $categories = Category::all();
         $colors = Color::all();
         $tags = Tag::all();
-       
-        $maxPrice = Product::orderBy('price', 'DESC')->first()->price;
-        $minPrice = Product::orderBy('price', 'ASC')->first()->price;
+        
+        $maxPrice = Product::orderBy('price','DESC')->first()->price;
+        $minPrice = Product::orderBy('price','ASC')->first()->price;
 
-        $result  = [
+        $result = [
             'categories' => $categories,
             'colors' => $colors,
             'tags' => $tags,
@@ -31,7 +32,6 @@ class FilterListController extends Controller
                 'min' => $minPrice,
             ],
         ];
-
         return response()->json($result);
     }
 }
