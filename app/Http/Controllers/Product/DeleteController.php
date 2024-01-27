@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 
 
-class DeleteController extends Controller
+class DeleteController extends BaseController
 {
     public function __invoke(Product $product){
         $product->delete();

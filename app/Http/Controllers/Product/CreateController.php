@@ -10,7 +10,7 @@ use App\Models\Category;
 use App\Models\Group;
 use App\Models\Product;
 
-class CreateController extends Controller
+class CreateController extends BaseController
 {
     public function __invoke(){
         $tags = Tag::all();

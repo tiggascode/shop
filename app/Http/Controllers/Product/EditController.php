@@ -11,7 +11,7 @@ use App\Models\Color;
 use App\Models\Category;
 use App\Models\Group;
 
-class EditController extends Controller
+class EditController extends BaseController
 {
     public function __invoke(Product $product){
         $tags = Tag::all();

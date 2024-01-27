@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     public function __invoke(){
         $products = Product::all();

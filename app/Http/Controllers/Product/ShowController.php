@@ -8,7 +8,7 @@ use App\Models\Product;
 
 
 
-class ShowController extends Controller
+class ShowController extends BaseController
 {
     public function __invoke(Product $product){
         return view('product.show', compact('product'));
